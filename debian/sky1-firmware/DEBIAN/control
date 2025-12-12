@@ -1,15 +1,12 @@
-Source: sky1-firmware
+Package: sky1-firmware
+Version: 1.1.0
+Architecture: all
+Maintainer: Entrpi <entrpi@proton.me>
+Installed-Size: 11659
 Section: non-free-firmware/kernel
 Priority: optional
-Maintainer: Entrpi <entrpi@proton.me>
-Build-Depends: debhelper-compat (= 13)
-Standards-Version: 4.6.2
-Homepage: https://github.com/sky1-linux/sky1-firmware
-
-Package: sky1-firmware
-Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}
+Homepage: https://github.com/sky1-linux/sky1-firmware
 Description: Firmware files for CIX Sky1 SoC
  This package contains proprietary firmware required for CIX Sky1 hardware:
  .

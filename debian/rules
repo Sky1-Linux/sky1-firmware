@@ -22,3 +22,9 @@ override_dh_auto_install:
 		install -D -m 644 "$$fw" \
 			$(CURDIR)/debian/sky1-firmware/lib/firmware/$$(basename "$$fw"); \
 	done
+
+	# Install WiFi firmware (RTL8852BE)
+	for fw in firmware/rtw89/*.bin; do \
+		install -D -m 644 "$$fw" \
+			$(CURDIR)/debian/sky1-firmware/lib/firmware/rtw89/$$(basename "$$fw"); \
+	done
