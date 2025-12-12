@@ -1,0 +1,8 @@
+sky1-firmware (1.0.0) unstable; urgency=medium
+
+  * Initial release
+  * Mali-G720 CSF firmware for Panthor GPU driver
+  * Audio DSP firmware
+  * Video codec firmware (AV1, HEVC, H.264, VP9, VP8, JPEG, MPEG2/4, VC1, AVS)
+
+ -- Entrpi <entrpi@proton.me>  Thu, 12 Dec 2025 20:00:00 +0800

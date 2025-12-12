@@ -1,0 +1,24 @@
+#!/usr/bin/make -f
+
+export DH_VERBOSE = 1
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	# Install GPU firmware
+	install -D -m 644 firmware/arm/mali/mali_csffw.bin \
+		$(CURDIR)/debian/sky1-firmware/lib/firmware/arm/mali/mali_csffw.bin
+	# Create symlink for Panthor driver
+	ln -sf arm/mali/mali_csffw.bin \
+		$(CURDIR)/debian/sky1-firmware/lib/firmware/mali_csffw.bin
+
+	# Install DSP firmware
+	install -D -m 644 firmware/dsp_fw.bin \
+		$(CURDIR)/debian/sky1-firmware/lib/firmware/dsp_fw.bin
+
+	# Install video codec firmware
+	for fw in firmware/*.fwb; do \
+		install -D -m 644 "$$fw" \
+			$(CURDIR)/debian/sky1-firmware/lib/firmware/$$(basename "$$fw"); \
+	done
