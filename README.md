@@ -49,5 +49,5 @@ These firmware files are proprietary and redistributable under their respective 
 
 ## Links
 
-- [Sky1 Linux](https://sky1-linux.org)
-- [linux-sky1 kernel](https://github.com/sky1-linux/linux-sky1)
+- [Sky1 Linux](https://github.com/Sky1-Linux)
+- [linux-sky1 kernel](https://github.com/Sky1-Linux/linux-sky1)
