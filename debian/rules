@@ -6,11 +6,13 @@ export DH_VERBOSE = 1
 	dh $@
 
 override_dh_auto_install:
-	# Install GPU firmware
+	# Install GPU firmware to arch-specific path (Mali-G720 = arch 12.8)
 	install -D -m 644 firmware/arm/mali/mali_csffw.bin \
+		$(CURDIR)/debian/sky1-firmware/lib/firmware/arm/mali/arch12.8/mali_csffw.bin
+	# Backward-compat symlinks
+	ln -sf arch12.8/mali_csffw.bin \
 		$(CURDIR)/debian/sky1-firmware/lib/firmware/arm/mali/mali_csffw.bin
-	# Create symlink for Panthor driver
-	ln -sf arm/mali/mali_csffw.bin \
+	ln -sf arm/mali/arch12.8/mali_csffw.bin \
 		$(CURDIR)/debian/sky1-firmware/lib/firmware/mali_csffw.bin
 
 	# Install DSP firmware
