@@ -30,3 +30,9 @@ override_dh_auto_install:
 		install -D -m 644 "$$fw" \
 			$(CURDIR)/debian/sky1-firmware/lib/firmware/rtw89/$$(basename "$$fw"); \
 	done
+
+	# Install ALSA UCM2 config for CIX Sky1 DP audio (replaces broken upstream)
+	for ucm in ucm2/cix_sky1/*.conf; do \
+		install -D -m 644 "$$ucm" \
+			$(CURDIR)/debian/sky1-firmware/usr/share/alsa/ucm2/conf.d/cix_sky1/$$(basename "$$ucm"); \
+	done

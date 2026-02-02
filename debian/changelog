@@ -1,3 +1,11 @@
+sky1-firmware (1.2.0) unstable; urgency=medium
+
+  * Add ALSA UCM2 config for CIX Sky1 HDMI/DisplayPort audio
+  * Fixes HDMI audio not appearing in PipeWire/GNOME
+  * Replaces broken upstream UCM config that referenced wrong mixer controls
+
+ -- Entrpi <entrpi@proton.me>  Sun, 02 Feb 2026 12:00:00 +0800
+
 sky1-firmware (1.1.0) unstable; urgency=medium
 
   * Add RTL8852BE WiFi firmware (rtw89)
