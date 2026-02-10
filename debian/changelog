@@ -1,3 +1,10 @@
+sky1-firmware (1.2.1) unstable; urgency=medium
+
+  * UCM2: add 5th HDMI/DP output (Hdmi4.conf) for DP4
+  * UCM2: fix indentation and comment consistency
+
+ -- Entrpi <entrpi@proton.me>  Mon, 10 Feb 2026 22:00:00 +1100
+
 sky1-firmware (1.2.0) unstable; urgency=medium
 
   * Add ALSA UCM2 config for CIX Sky1 HDMI/DisplayPort audio
